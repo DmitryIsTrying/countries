@@ -1,4 +1,21 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
 .container {
   display: grid;
   background-color: var(--color-background);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 100px;
+  @media screen and (max-width: 1600px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 740px) {
+    grid-template-columns: 1fr;
+  }
 }
