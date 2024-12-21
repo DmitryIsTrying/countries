@@ -1,6 +1,6 @@
 .container {
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 200px;
   background-color: var(--color-background);
   min-height: 100vh;
 }
@@ -13,6 +13,13 @@
 .main {
   display: flex;
   flex-direction: column;
-  padding-top: 150px;
+  padding-top: 100px;
   gap: 100px;
+}
+
+.linearBar {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
 }

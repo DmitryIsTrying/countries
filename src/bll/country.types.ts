@@ -12,10 +12,12 @@ export type CountryInfo = {
   capital: string[];
   altSpellings: string[];
   region: string;
+  subregion: string;
   languages: Languages;
   translations: unknown;
   latlng: number[];
   landlocked: boolean;
+  borders: string[];
   area: number;
   demonyms: Demonyms;
   flag: string;
@@ -82,9 +84,10 @@ type Name = {
   nativeName: NativeName;
 };
 
-type NativeName = {
-  eng: {
+type NativeName = Record<
+  string,
+  {
     official: string;
     common: string;
-  };
-};
+  }
+>;

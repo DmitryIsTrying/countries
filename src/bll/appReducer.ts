@@ -4,7 +4,7 @@ type AppStatus = "IDLE" | "PENDING" | "FAILED" | "SUCCEEDED";
 export type ThemeMode = "light" | "dark";
 
 const initState = {
-  status: "IDLE" as AppStatus,
+  status: "PENDING" as AppStatus,
   error: null as null | string,
   theme: checkThemeSettings(),
 };

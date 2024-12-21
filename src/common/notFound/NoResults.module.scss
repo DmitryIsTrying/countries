@@ -1,0 +1,32 @@
+.noResults {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  background-color: var(--color-element);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.308);
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 50px;
+
+  &__icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-size: 24px;
+    color: var(--color-text);
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    font-size: 16px;
+    color: var(--color-text);
+    line-height: 1.5;
+  }
+}

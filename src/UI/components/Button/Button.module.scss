@@ -1,0 +1,27 @@
+.button {
+  background-color: var(--color-element);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border-top-left-radius: 20px;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.624);
+  transition: box-shadow 0.5s ease;
+  width: fit-content;
+
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.921);
+
+    img {
+      transform: rotate(45deg);
+    }
+  }
+
+  img {
+    transition: transform 0.5s ease;
+  }
+}

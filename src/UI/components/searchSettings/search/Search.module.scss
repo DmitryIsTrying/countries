@@ -11,6 +11,7 @@
   color: var(--color-input-text);
   padding: 0 5px;
   border-radius: 16px;
+  font-size: clamp(8px, 5vw, 20px);
   &::placeholder {
     color: var(--color-input-text);
   }

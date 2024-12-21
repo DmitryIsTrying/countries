@@ -1,0 +1,19 @@
+.progressContainer {
+  width: 100%;
+  height: 8px;
+  background-color: var(--color-element);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Индикатор прогресса */
+.progressBar {
+  height: 100%;
+  background: linear-gradient(90deg, #1976d2, #64b5f6); /* Градиент, как в Material-UI */
+  transition: width 0.3s ease; /* Плавное изменение ширины */
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
