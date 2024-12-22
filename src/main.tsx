@@ -1,9 +1,8 @@
-import { store } from "bll/store";
-import { router } from "common/routes/routes";
+import { router, store } from "app";
 import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
 import { RouterProvider } from "react-router-dom";
-import "./index.css";
+import "index.css";
 
 createRoot(document.getElementById("root")!).render(
   <Provider store={store}>

@@ -1,0 +1,18 @@
+.selectFilter {
+  background-color: var(--color-element);
+  border: none;
+  padding: 10px;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: clamp(8px, 5vw, 20px);
+  transition: background-color 300ms ease-in, color 300ms ease-in, border-bottom-color 300ms ease-in,
+    box-shadow 300ms ease;
+
+  box-shadow: rgba(100, 100, 111, 0.053) 0px 7px 29px 0px;
+  &:focus {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  &:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+}

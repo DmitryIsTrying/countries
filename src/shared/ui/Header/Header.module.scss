@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  position: fixed;
+  flex-wrap: wrap;
+  gap: 30px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 2px solid var(--color-input-text);
+  background-color: var(--color-element);
+  z-index: 10000;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px 20px;
+  }
+}
+.changeModeImg {
+  width: 25px;
+  height: 25px;
+  display: block;
+  animation: blink 300ms linear;
+}
+
+/* анимация для чейнджа картинки */
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .changeModeImg {
+    width: 20px;
+    height: 20px;
+  }
+}
+.themeContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 300ms ease-in, color 300ms ease-in, border-bottom-color 300ms ease-in,
+    box-shadow 300ms ease;
+
+  &:hover {
+    box-shadow: 0 4px 10px var(--color-text);
+  }
+}
+.title {
+  font-size: clamp(22px, 5vw, 40px);
+  text-wrap: nowrap;
+}
+.changeModeText {
+  font-size: clamp(8px, 5vw, 24px);
+  text-wrap: nowrap;
+}

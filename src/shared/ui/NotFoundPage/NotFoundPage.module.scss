@@ -1,0 +1,59 @@
+/* Основной контейнер */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Контент внутри контейнера */
+.content {
+  text-align: center;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 50px;
+  background: var(--color-element);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Заголовок 404 */
+.title {
+  font-size: 100px;
+  margin: 0;
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+/* Текст "Упс! Страница не найдена" */
+.text {
+  font-size: 24px;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* Описание */
+.description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Кнопка "Вернуться на главную" */
+.link {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 300ms ease-in, color 300ms ease-in, border-bottom-color 300ms ease-in;
+  text-decoration: none;
+}
+
+.link:hover {
+  background-color: #2980b9;
+}
