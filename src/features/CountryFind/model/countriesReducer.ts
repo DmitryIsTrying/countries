@@ -12,12 +12,12 @@ const initState = {
   filterRegion: "All" as Region,
 };
 
-export type Countries = typeof initState;
+export type CountriesReducer = typeof initState;
 
 export const countriesReducer = (
-  state: Countries = initState,
+  state: CountriesReducer = initState,
   action: CountriesActions
-): Countries => {
+): CountriesReducer => {
   switch (action.type) {
     case "SET_COUNTRIES": {
       return { ...state, countries: [...action.countries] };

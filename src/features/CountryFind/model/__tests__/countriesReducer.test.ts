@@ -4,7 +4,7 @@
 
 import { describe, test, expect } from "vitest";
 import {
-  Countries,
+  CountriesReducer,
   countriesReducer,
   Region,
   setCountries,
@@ -12,7 +12,7 @@ import {
 } from "../countriesReducer";
 
 describe("countriesReducer", () => {
-  const initialState: Countries = {
+  const initialState: CountriesReducer = {
     countries: [],
     filterRegion: "All",
   };
