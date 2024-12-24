@@ -1,4 +1,4 @@
-import { ThemeMode } from "app/appReducer";
+import { ThemeMode } from "@app";
 
 export const checkThemeSettings = (): ThemeMode => {
   // 1. Проверяем localStorage

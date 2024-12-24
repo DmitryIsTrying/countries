@@ -30,21 +30,21 @@
 /* Текст "Упс! Страница не найдена" */
 .text {
   font-size: 24px;
-  color: #333;
+
   margin: 10px 0;
 }
 
 /* Описание */
 .description {
   font-size: 16px;
-  color: #666;
+
   margin-bottom: 20px;
 }
 
 /* Кнопка "Вернуться на главную" */
 .link {
   background-color: #3498db;
-  color: white;
+  color: var(--color-text);
   border: none;
   padding: 10px 20px;
   font-size: 16px;

@@ -1,17 +1,17 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tsconfigPaths from "vite-tsconfig-paths";
-import path from "path";
+import { resolve } from "path";
 
-// https://vite.dev/config/
 export default defineConfig({
+  base: "/countries/",
   plugins: [react(), tsconfigPaths()],
   resolve: {
     alias: {
-      "@app": path.resolve(__dirname, "src/app"),
-      "@shared": path.resolve(__dirname, "src/shared"),
-      "@CountryFind": path.resolve(__dirname, "src/shared/CountryFind"),
-      "@Search": path.resolve(__dirname, "src/shared/Search"),
+      "@app": resolve(__dirname, "src/app"),
+      "@shared": resolve(__dirname, "src/shared"),
+      "@CountryFind": resolve(__dirname, "src/features/CountryFind"),
+      "@Search": resolve(__dirname, "src/features/Search"),
     },
   },
 });

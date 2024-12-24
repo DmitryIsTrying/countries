@@ -1,13 +1,11 @@
-import { useAppSelector } from "shared/hooks/useAppSelector";
-import { selectError, selectStatus, selectTheme } from "app/appStateSelectors";
-import { changeTheme } from "shared/utils/changeTheme";
-import { useEffect, useLayoutEffect } from "react";
-import { SkeletonTheme } from "react-loading-skeleton";
-import { Outlet, useNavigate } from "react-router-dom";
-import { Flip, toast, ToastContainer } from "react-toastify";
 import "./App.css";
-import { Header } from "../shared/ui/Header/Header";
-import { LinearBar } from "@shared/ui";
+
+import { changeTheme, LinearBar, useAppSelector, Header } from "@shared";
+import { selectError, selectStatus, selectTheme } from "./appStateSelectors";
+import { Outlet, useNavigate } from "react-router-dom";
+import { useEffect, useLayoutEffect } from "react";
+import { Flip, toast, ToastContainer } from "react-toastify";
+import { SkeletonTheme } from "react-loading-skeleton";
 
 function App() {
   const theme = useAppSelector(selectTheme);

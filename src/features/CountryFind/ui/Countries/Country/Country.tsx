@@ -1,8 +1,7 @@
-import { useHover } from "@shared/hooks";
-import { Transition } from "@shared/ui";
 import { useRef } from "react";
 import { transformNumber } from "shared/utils/transformNumber";
 import styles from "./Country.module.scss";
+import { Transition, useHover } from "@shared";
 
 type CountryProps = {
   name: string;
@@ -19,7 +18,14 @@ export const Country = ({ flagUrl, name, population, region, capital }: CountryP
   return (
     <div ref={ref} className={styles.container}>
       <Transition isOpen={isHovering} link={`/${name.toLowerCase()}`} />
-      <img loading="lazy" className={styles.flagPhoto} src={flagUrl} alt={`Flag of ${name}`} />
+      <img
+        width="300"
+        height="200"
+        loading="lazy"
+        className={styles.flagPhoto}
+        src={flagUrl}
+        alt={`Flag of ${name}`}
+      />
       <div className={styles.infoContainer}>
         <h2 className={`${styles.title} nunito-sans-800`}>{name}</h2>
         <p className={`${styles.aboutText} nunito-sans-300`}>

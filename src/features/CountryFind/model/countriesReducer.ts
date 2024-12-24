@@ -1,8 +1,9 @@
 import { errorBoundury } from "shared/utils/errorBoundury";
-import { setErrorField, setStatus } from "../../../app/appReducer";
+
 import { CountryInfo } from "./types/country.types";
-import { AppThunk } from "app";
+import { AppThunk } from "app/store";
 import { countriesAPI } from "../api";
+import { setErrorField, setStatus } from "@app";
 
 export type Region = "Americas" | "Africa" | "Asia" | "Europe" | "Oceania" | "All";
 
@@ -11,7 +12,7 @@ const initState = {
   filterRegion: "All" as Region,
 };
 
-type Countries = typeof initState;
+export type Countries = typeof initState;
 
 export const countriesReducer = (
   state: Countries = initState,

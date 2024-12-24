@@ -1,17 +1,16 @@
-import { leftArrow } from "@shared/assets";
-import { useAppDispatch } from "shared/hooks/useAppDispatch";
-import { useAppSelector } from "shared/hooks/useAppSelector";
-import { NoResults } from "shared/ui/NoResults/NoResults";
-import { selectStatus } from "app/appStateSelectors";
-import { transformNumber } from "shared/utils/transformNumber";
-import { useLayoutEffect } from "react";
 import { useParams } from "react-router-dom";
-import { CardItem } from "./CardItem";
 import styles from "./CountryCard.module.scss";
-import { CountryCardSkeleton } from "./CountryCardSkeleton";
-import { Border } from "./border/Border";
-import { searchCountriesTC, selectCountries } from "features/CountryFind/model";
-import { Button } from "@shared/ui";
+import { Button, NoResults, transformNumber, useAppDispatch, useAppSelector } from "@shared";
+import { leftArrow } from "@shared";
+import { selectStatus } from "@app";
+import {
+  Border,
+  CardItem,
+  CountryCardSkeleton,
+  searchCountriesTC,
+  selectCountries,
+} from "@CountryFind";
+import { useLayoutEffect } from "react";
 
 export const CountryCard = () => {
   const { countryName } = useParams();

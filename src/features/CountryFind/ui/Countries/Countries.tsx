@@ -1,11 +1,8 @@
-import { selectStatus } from "app/appStateSelectors";
 import { useMemo } from "react";
 import styles from "./Countries.module.scss";
-import { CountrySkeleton } from "./Country/CountrySkeleton";
-import { Country } from "./Country/Country";
-import { NoResults } from "shared/ui/NoResults/NoResults";
-import { selectCountries, selectFilter } from "features/CountryFind/model";
-import { useAppSelector } from "@shared/hooks";
+import { Country, CountrySkeleton, selectCountries, selectFilter } from "@CountryFind";
+import { NoResults, useAppSelector } from "@shared";
+import { selectStatus } from "@app";
 
 export const Countries = () => {
   const countries = useAppSelector(selectCountries);

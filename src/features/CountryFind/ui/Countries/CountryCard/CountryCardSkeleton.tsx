@@ -1,9 +1,9 @@
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css"; // Подключаем стили
 import styles from "./CountryCard.module.scss";
-import { leftArrow } from "@shared/assets";
+import { leftArrow } from "@shared";
 import { BorderSekeleton } from "./border/BorderSekeleton";
-import { Button } from "@shared/ui";
+import { Button } from "@shared";
 
 export const CountryCardSkeleton = () => {
   return (

@@ -1,9 +1,10 @@
-import { createBrowserRouter } from "react-router-dom";
-import App from "app/App";
-import { CountriesPanel, CountryCard } from "features/CountryFind";
-import { NotFoundPage } from "@shared/ui";
+import { createHashRouter } from "react-router-dom";
 
-export const router = createBrowserRouter([
+import { CountriesPanel, CountryCard } from "@CountryFind";
+import { NotFoundPage } from "@shared";
+import App from "app/App";
+//because gh pages
+export const router = createHashRouter([
   {
     path: "/", // Основной путь
     element: <App />,

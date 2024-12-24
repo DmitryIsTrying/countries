@@ -5,9 +5,11 @@ import {
   legacy_createStore as createStore,
 } from "redux";
 
-import { CountriesActions, countriesReducer } from "features/CountryFind";
 import { thunk, ThunkAction, ThunkDispatch } from "redux-thunk";
-import { appReducer, AppStateActions } from "../app/appReducer";
+
+import { checkThemeSettings } from "shared/utils/checkThemeSettings";
+import { CountriesActions, countriesReducer } from "@CountryFind";
+import { appReducer, AppStateActions, AppStatus } from "./appReducer";
 
 const reducer = combineReducers({
   countries: countriesReducer,
@@ -18,12 +20,17 @@ const reducer = combineReducers({
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 // Исправленный preloadedState
 const preloadedState = {
-  app: undefined,
+  app: {
+    status: "PENDING" as AppStatus,
+    error: null as null | string,
+    theme: checkThemeSettings(),
+  },
   countries: undefined, // Начальное состояние для countriesReducer
 };
 
 export const store = createStore(
   reducer,
+  //@ts-ignore
   preloadedState, // Передаем preloadedState
   composeEnhancers(applyMiddleware(thunk))
 );

@@ -4,10 +4,10 @@
     "target": "ES2020",
     "baseUrl": "src",
     "paths": {
-      "@app": ["src/app/*"],
-      "@shared/*": ["shared/*"],
-      "@CountryFind/*": ["src/features/CountryFind/*"],
-      "@Search/*": ["src/features/Search/*"]
+      "@app": ["app"],
+      "@shared": ["shared"],
+      "@CountryFind": ["features/CountryFind"],
+      "@Search": ["features/Search"]
     },
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],

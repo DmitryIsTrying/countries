@@ -1,7 +1,7 @@
 import { AxiosError } from "axios";
-import { setErrorField, setStatus } from "app/appReducer";
 import { Dispatch } from "redux";
-import { setCountries } from "features/CountryFind";
+import { setCountries } from "@CountryFind";
+import { setErrorField, setStatus } from "@app";
 
 export const errorBoundury = (err: unknown, dispatch: Dispatch) => {
   if (err instanceof AxiosError) {

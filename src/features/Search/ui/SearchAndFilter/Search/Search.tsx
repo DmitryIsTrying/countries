@@ -1,9 +1,7 @@
-import { useSearch } from "shared/hooks/useSearch";
 import styles from "./Search.module.scss";
-import { searchIcon } from "@shared/assets";
+import { searchIcon, useAppDispatch, useSearch } from "@shared";
 import { ChangeEvent, useRef } from "react";
-import { useAppDispatch } from "shared/hooks/useAppDispatch";
-import { searchCountriesTC } from "features/CountryFind";
+import { searchCountriesTC } from "@CountryFind";
 
 type SearchProps = {};
 

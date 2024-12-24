@@ -1,12 +1,10 @@
-import { checkThemeSettings } from "@shared/utils";
-
 export type AppStatus = "IDLE" | "PENDING" | "FAILED" | "SUCCEEDED";
 export type ThemeMode = "light" | "dark";
 
 const initState = {
   status: "PENDING" as AppStatus,
   error: null as null | string,
-  theme: checkThemeSettings(),
+  theme: "light" as ThemeMode,
 };
 
 export type AppState = typeof initState;

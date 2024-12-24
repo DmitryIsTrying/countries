@@ -1,10 +1,6 @@
+import { selectTheme, setTheme } from "@app";
 import styles from "./Header.module.scss";
-import { moon } from "@shared/assets";
-import { sun } from "@shared/assets";
-import { useAppSelector } from "shared/hooks/useAppSelector";
-import { selectTheme } from "app/appStateSelectors";
-import { useAppDispatch } from "shared/hooks/useAppDispatch";
-import { setTheme } from "app/appReducer";
+import { moon, sun, useAppDispatch, useAppSelector } from "@shared";
 
 export const Header = () => {
   const theme = useAppSelector(selectTheme);

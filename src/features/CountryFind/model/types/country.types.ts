@@ -69,14 +69,13 @@ type Idd = {
   suffixes: string[];
 };
 
-type Currencies = {
-  SHP: SHP;
-};
-
-type SHP = {
-  name: string;
-  symbol: string;
-};
+type Currencies = Record<
+  string,
+  {
+    name: string;
+    symbol: string;
+  }
+>;
 
 type Name = {
   common: string;

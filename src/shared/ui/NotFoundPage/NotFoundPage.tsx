@@ -12,7 +12,7 @@ export const NotFoundPage = () => {
           address or the page has been deleted.
         </p>
         <Link className={`${styles.link}  nunito-sans-800`} to={"/"}>
-          Вернуться на главную
+          Go back to the main page
         </Link>
       </div>
     </div>
